@@ -19,9 +19,9 @@ void defineTarget(std::vector<cv::Rect> potentialTargets, std::vector<cv::Rect> 
 
     std::sort(potentialTargets.begin(), potentialTargets.end(), compare_rect);
 
-    if(nbTargets >= potentialTargets.size())
+    if(nbTargets > potentialTargets.size())
     {
-        nbTargets = potentialTargets.size()-1;
+        nbTargets = potentialTargets.size();
     }
 
     target.clear();
